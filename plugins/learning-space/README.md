@@ -1,4 +1,4 @@
-Learning Space is a shared canvas for learning on your Mac. You write and draw by hand. Your AI agent sees the board, draws diagrams, explains ideas next to your work and checks each step. There is no AI inside the app: the agent you already use connects to it over MCP.
+Learning Space is a shared canvas for learning on your Mac or Linux computer. You write and draw by hand. Your AI agent sees the board, draws diagrams, explains ideas next to your work and checks each step. There is no AI inside the app: the agent you already use connects to it over MCP.
 
 **What the plugin adds**
 
@@ -7,7 +7,7 @@ Learning Space is a shared canvas for learning on your Mac. You write and draw b
 
 **Prerequisites**
 
-- macOS.
+- macOS or Linux.
 - Learning Space opened once. No packaged app exists yet: run it from source (`github.com/Nordup/math-tutor`, branch `main`, folder `space/`, `npm install && npm run dev`). The first launch installs the `~/.learning-space/bin/learning-space` command that agents use to connect.
 - Keep the app open while you work. If it is closed, the agent asks you to open it.
 

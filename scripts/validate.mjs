@@ -196,7 +196,7 @@ const extFile = "claude-extensions/learning-space/manifest.json";
   if (m.server?.type !== "binary") fail(extFile, "server.type must be binary");
   if (m.server?.entry_point !== `\${HOME}${RELAY}`) fail(extFile, "server.entry_point must be the relay command");
   stdioServer(extFile, { [NAME]: m.server?.mcp_config }, "${HOME}");
-  if (JSON.stringify(m.compatibility?.platforms) !== '["darwin"]') fail(extFile, 'platforms must be ["darwin"]');
+  if (JSON.stringify(m.compatibility?.platforms) !== '["darwin","linux"]') fail(extFile, 'platforms must be ["darwin","linux"]');
 }
 for (const asset of ["assets/logo.svg", "assets/logo@1024w.png", "README.md"]) {
   if (!existsSync(join(root, PLUGIN, asset))) fail(PLUGIN, `missing ${asset}`);

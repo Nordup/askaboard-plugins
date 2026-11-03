@@ -1,12 +1,12 @@
 # Learning Space agent plugins
 
-Plugins that connect your AI agent to Learning Space, a shared canvas on your Mac. You talk with the agent, and it explains on the board with drawings and animations. You can also write and draw on the board; the agent sees it and checks your work.
+Plugins that connect your AI agent to Learning Space, a shared canvas on your Mac or Linux computer. You talk with the agent, and it explains on the board with drawings and animations. You can also write and draw on the board; the agent sees it and checks your work.
 
 Each plugin adds the `learning-space` MCP server and a small skill that teaches the agent how to work on the board. See [plugins/learning-space/README.md](plugins/learning-space/README.md) for what the plugin does and for example prompts.
 
 ## Before you install
 
-1. Get Learning Space (macOS). No packaged app exists yet. The app runs from source: clone [`github.com/Nordup/math-tutor`](https://github.com/Nordup/math-tutor) (branch `main`) and go to the folder `space/`.
+1. Get Learning Space (macOS or Linux). No packaged app exists yet. The app runs from source: clone [`github.com/Nordup/math-tutor`](https://github.com/Nordup/math-tutor) (branch `main`) and go to the folder `space/`.
 2. Start the app with `npm install && npm run dev`. Each launch writes `~/.learning-space/bin/learning-space`, the command that agents use to connect.
 3. Keep the app open while you work with the agent.
 
@@ -64,7 +64,7 @@ Codex runs a plugin's hooks only after you trust them: run `/hooks` in Codex and
 ### Claude Desktop (Chat tab)
 
 1. Download [`learning-space.mcpb`](claude-extensions/learning-space/dist/learning-space.mcpb).
-2. Double-click it, or drag it into Claude Desktop.
+2. Double-click it, or drag it into Claude Desktop. On Linux, run `claude-desktop <path to learning-space.mcpb>`, or use **Install** in the app's agent list.
 
 ### Cursor
 
@@ -88,7 +88,7 @@ For VS Code, Windsurf and other MCP clients. HTTP clients use the server URL; st
 }
 ```
 
-Some clients do not expand `~`. Use the full path, for example `/Users/<you>/.learning-space/bin/learning-space`.
+Some clients do not expand `~`. Use the full path, for example `/Users/<you>/.learning-space/bin/learning-space` on macOS or `/home/<you>/.learning-space/bin/learning-space` on Linux.
 
 ## Updates
 
@@ -100,7 +100,7 @@ When a new version is out:
 
 ## Develop
 
-Requires Node 20 or later and `zip`.
+Requires Node 20 or later and Info-ZIP `zip`.
 
 ```sh
 npm install

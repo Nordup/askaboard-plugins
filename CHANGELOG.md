@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.1.3
+
+- Linux support: the plugins and the Claude app extension work on Linux as well as macOS. The app, its MCP server and the relay `~/.learning-space/bin/learning-space` run on Linux.
+- The `learning-space.mcpb` bundle lists the platforms `darwin` and `linux`.
+
 ## 0.1.2
 
 - Codex gets every tool description and the server instructions whole, and runs the board news hook: the plugin no longer has the root Agent Plugins manifest (`plugin.json`, `mcp.json`), which made Codex cut them at 1,000 bytes and skip hooks. Codex reads `.codex-plugin/plugin.json`.

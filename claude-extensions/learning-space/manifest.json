@@ -3,7 +3,7 @@
   "manifest_version": "0.3",
   "name": "learning-space",
   "display_name": "Learning Space",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Teach on a shared canvas: Claude sees the learner's handwriting and draws, explains and checks work in Learning Space.",
   "author": {
     "name": "Nordup",
@@ -41,7 +41,8 @@
   "compatibility": {
     "claude_desktop": ">=0.10.0",
     "platforms": [
-      "darwin"
+      "darwin",
+      "linux"
     ]
   },
   "tools_generated": true
