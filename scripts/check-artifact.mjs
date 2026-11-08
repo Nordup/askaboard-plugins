@@ -6,10 +6,10 @@ import { dirname, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const artifact = "claude-extensions/learning-space/dist/learning-space.mcpb";
+const artifact = "claude-extensions/askaboard/dist/askaboard.mcpb";
 const run = (cmd, args) => spawnSync(cmd, args, { cwd: root, stdio: "inherit" }).status;
 
-if (run("node", ["claude-extensions/learning-space/scripts/pack.mjs"]) !== 0) process.exit(1);
+if (run("node", ["claude-extensions/askaboard/scripts/pack.mjs"]) !== 0) process.exit(1);
 
 if (run("git", ["ls-files", "--error-unmatch", artifact]) !== 0) {
   console.error(`${artifact} is not committed.`);

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Builds dist/learning-space.mcpb for the Claude desktop app.
+// Builds dist/askaboard.mcpb for the Claude desktop app.
 //
 // The bundle is deterministic: the same inputs give the same bytes, so CI can
 // rebuild it and fail when the committed file is stale (scripts/check-artifact.mjs).
@@ -16,8 +16,8 @@ import { fileURLToPath } from "node:url";
 const here = dirname(fileURLToPath(import.meta.url));
 export const extDir = resolve(here, "..");
 export const repoRoot = resolve(extDir, "../..");
-const pluginDir = join(repoRoot, "plugins/learning-space");
-export const outFile = join(extDir, "dist/learning-space.mcpb");
+const pluginDir = join(repoRoot, "plugins/askaboard");
+export const outFile = join(extDir, "dist/askaboard.mcpb");
 
 const ZIP_EPOCH = new Date(Date.UTC(1980, 0, 1, 0, 0, 0));
 const FILE_MODE = 0o644;

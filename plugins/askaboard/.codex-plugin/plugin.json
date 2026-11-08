@@ -1,0 +1,45 @@
+{
+  "name": "askaboard",
+  "version": "0.1.4",
+  "description": "Teach on a shared canvas: Codex sees the learner's handwriting and draws, explains and checks work in Askaboard.",
+  "author": {
+    "name": "Nordup",
+    "url": "https://github.com/Nordup"
+  },
+  "homepage": "https://github.com/Nordup/askaboard-plugins",
+  "repository": "https://github.com/Nordup/askaboard-plugins.git",
+  "license": "MIT",
+  "keywords": [
+    "askaboard",
+    "learning",
+    "education",
+    "tutor",
+    "canvas",
+    "whiteboard",
+    "handwriting",
+    "mcp"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./mcp.codex.json",
+  "hooks": "./hooks/codex.json",
+  "interface": {
+    "displayName": "Askaboard",
+    "shortDescription": "Teach on a shared canvas where the learner writes by hand.",
+    "longDescription": "Askaboard is a local desktop canvas for learning. The learner writes and draws by hand; with this plugin, Codex sees the board, places explanations and diagrams beside the learner's work, and checks each step. Codex reads what the learner wants: a hint, an explanation, material or a second opinion on their drawing. The app runs on your Mac or Linux computer and keeps your work in a local folder.",
+    "developerName": "Nordup",
+    "category": "Education",
+    "capabilities": [
+      "Read",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/Nordup/askaboard-plugins",
+    "brandColor": "#6E8BFF",
+    "composerIcon": "./assets/logo.svg",
+    "logo": "./assets/logo.svg",
+    "defaultPrompt": [
+      "Look at my board in Askaboard and check my last step",
+      "Teach me how derivatives work on the Askaboard board, one small step at a time",
+      "Give me a hint for the problem I wrote in Askaboard, but not the answer"
+    ]
+  }
+}

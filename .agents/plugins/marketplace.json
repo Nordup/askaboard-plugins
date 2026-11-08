@@ -1,14 +1,14 @@
 {
-  "name": "learning-space",
+  "name": "askaboard",
   "interface": {
-    "displayName": "Learning Space"
+    "displayName": "Askaboard"
   },
   "plugins": [
     {
-      "name": "learning-space",
+      "name": "askaboard",
       "source": {
         "source": "local",
-        "path": "./plugins/learning-space"
+        "path": "./plugins/askaboard"
       },
       "policy": {
         "installation": "AVAILABLE",

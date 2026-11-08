@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "askaboard": {
+      "command": "${HOME}/.askaboard/bin/askaboard",
+      "args": ["mcp"]
+    }
+  }
+}

@@ -15,10 +15,10 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
 const TARGETS = [
   [".claude-plugin/marketplace.json", ["metadata", "version"]],
   [".cursor-plugin/marketplace.json", ["metadata", "version"]],
-  ["plugins/learning-space/.claude-plugin/plugin.json", ["version"]],
-  ["plugins/learning-space/.codex-plugin/plugin.json", ["version"]],
-  ["plugins/learning-space/.cursor-plugin/plugin.json", ["version"]],
-  ["claude-extensions/learning-space/manifest.json", ["version"]],
+  ["plugins/askaboard/.claude-plugin/plugin.json", ["version"]],
+  ["plugins/askaboard/.codex-plugin/plugin.json", ["version"]],
+  ["plugins/askaboard/.cursor-plugin/plugin.json", ["version"]],
+  ["claude-extensions/askaboard/manifest.json", ["version"]],
 ];
 
 const check = process.argv.includes("--check");

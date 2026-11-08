@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.1.4
+
+- Learning Space is now **Askaboard** (app 0.1.0). Every name changed:
+  - App repo: `github.com/Nordup/askaboard` (was `Nordup/math-tutor`). Plugin repo: `github.com/Nordup/askaboard-plugins` (was `Nordup/learning-space-plugins`).
+  - Marketplace, plugin, skill and MCP server: `askaboard`. Plugin id: `askaboard@askaboard`. Display name: Askaboard.
+  - Command: `~/.askaboard/bin/askaboard` (`mcp`, `news --client <agent>`, `--version`). The server URL `http://127.0.0.1:47821/mcp` and the tool names are unchanged.
+  - Folders: `plugins/askaboard`, `skills/askaboard`, `claude-extensions/askaboard`. Claude app bundle: `askaboard.mcpb`.
+- The old `~/.learning-space` command and the `learning-space` plugin no longer work. Remove the `learning-space` plugin and its marketplace, then install `askaboard@askaboard` from `Nordup/askaboard-plugins` (see the README).
+- Install: download Askaboard for Mac from https://github.com/Nordup/askaboard/releases/latest and open it once; the first launch writes `~/.askaboard/bin/askaboard`. On Linux, run the app from source (`space/`, `npm install && npm run dev`).
+- The Claude app bundle `askaboard.mcpb` lists Linux as well as macOS, as the 0.1.3 bundle did.
+
 ## 0.1.3
 
 - Linux support: the plugins and the Claude app extension work on Linux as well as macOS. The app, its MCP server and the relay `~/.learning-space/bin/learning-space` run on Linux.

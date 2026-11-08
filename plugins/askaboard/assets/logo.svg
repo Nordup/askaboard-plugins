@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="256" height="256" viewBox="0 0 256 256">
-  <title>Learning Space</title>
+  <title>Askaboard</title>
   <rect width="256" height="256" rx="56" fill="#111113"/>
   <rect x="2" y="2" width="252" height="252" rx="54" fill="none" stroke="#ffffff" stroke-opacity="0.08" stroke-width="4"/>
   <g fill="#5e5e6a">

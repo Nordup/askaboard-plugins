@@ -12,12 +12,12 @@ import { existsSync, mkdtempSync, readFileSync, rmSync } from "node:fs";
 import { tmpdir } from "node:os";
 import { dirname, join, resolve } from "node:path";
 import { fileURLToPath } from "node:url";
-import { stage } from "../claude-extensions/learning-space/scripts/pack.mjs";
+import { stage } from "../claude-extensions/askaboard/scripts/pack.mjs";
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..");
-const NAME = "learning-space";
-const PLUGIN = "plugins/learning-space";
-const RELAY = "/.learning-space/bin/learning-space";
+const NAME = "askaboard";
+const PLUGIN = "plugins/askaboard";
+const RELAY = "/.askaboard/bin/askaboard";
 const MCP_URL = "http://127.0.0.1:47821/mcp";
 
 const errors = [];
@@ -97,7 +97,7 @@ for (const file of [".claude-plugin/marketplace.json", ".cursor-plugin/marketpla
   }
 }
 
-// The prompt hook: `learning-space news --client <label>` before each prompt. Each client gets
+// The prompt hook: `askaboard news --client <label>` before each prompt. Each client gets
 // its own file (the label differs), and neither is named hooks/hooks.json, which Claude Code and
 // Codex would also load by default.
 function checkNewsHook(file, m, label) {
@@ -188,7 +188,7 @@ for (const file of [`${PLUGIN}/plugin.json`, `${PLUGIN}/mcp.json`]) {
 
 // --- Claude app (.mcpb) manifest ---------------------------------------------
 
-const extFile = "claude-extensions/learning-space/manifest.json";
+const extFile = "claude-extensions/askaboard/manifest.json";
 {
   const m = read(extFile);
   checkCommon(extFile, m);
@@ -196,7 +196,7 @@ const extFile = "claude-extensions/learning-space/manifest.json";
   if (m.server?.type !== "binary") fail(extFile, "server.type must be binary");
   if (m.server?.entry_point !== `\${HOME}${RELAY}`) fail(extFile, "server.entry_point must be the relay command");
   stdioServer(extFile, { [NAME]: m.server?.mcp_config }, "${HOME}");
-  if (JSON.stringify(m.compatibility?.platforms) !== '["darwin","linux"]') fail(extFile, 'platforms must be ["darwin","linux"]');
+  if (JSON.stringify(m.compatibility?.platforms) !== '["darwin","linux"]') fail(extFile, 'platforms must be ["darwin", "linux"]');
 }
 for (const asset of ["assets/logo.svg", "assets/logo@1024w.png", "README.md"]) {
   if (!existsSync(join(root, PLUGIN, asset))) fail(PLUGIN, `missing ${asset}`);
@@ -221,7 +221,7 @@ if (errors.length === 0) {
     console.log("\nSkipped `claude plugin validate`: the claude CLI is not on PATH.");
   }
 
-  const tmp = mkdtempSync(join(tmpdir(), "learning-space-mcpb-"));
+  const tmp = mkdtempSync(join(tmpdir(), "askaboard-mcpb-"));
   try {
     stage(tmp);
     external("mcpb validate", "npx", ["-y", "@anthropic-ai/mcpb", "validate", join(tmp, "manifest.json")]);
