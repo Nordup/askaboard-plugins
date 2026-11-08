@@ -8,7 +8,7 @@ Askaboard is a shared canvas for learning on your Mac or Linux computer. You wri
 **Prerequisites**
 
 - macOS or Linux.
-- Askaboard opened once. On a Mac, download it from https://github.com/Nordup/askaboard/releases/latest. On Linux, run it from source (`github.com/Nordup/askaboard`, folder `space/`, `npm install && npm run dev`). The first launch writes the `~/.askaboard/bin/askaboard` command that agents use to connect.
+- Askaboard opened once. On a Mac, download it from https://github.com/Nordup/askaboard/releases/latest. On Linux, run it from source (`github.com/Nordup/askaboard`, folder `apps/desktop/`, `npm install && npm run dev`). The first launch writes the `~/.askaboard/bin/askaboard` command that agents use to connect.
 - Keep the app open while you work. If it is closed, the agent asks you to open it.
 
 **Install**

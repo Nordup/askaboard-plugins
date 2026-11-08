@@ -8,7 +8,7 @@ Each plugin adds the `askaboard` MCP server and a small skill that teaches the a
 
 1. Download Askaboard for Mac from the [GitHub releases of `Nordup/askaboard`](https://github.com/Nordup/askaboard/releases/latest).
 2. Open the app once. The first launch writes `~/.askaboard/bin/askaboard`, the command that agents use to connect.
-   On Linux, run the app from source: clone [`github.com/Nordup/askaboard`](https://github.com/Nordup/askaboard), go to the folder `space/` and run `npm install && npm run dev`.
+   On Linux, run the app from source: clone [`github.com/Nordup/askaboard`](https://github.com/Nordup/askaboard), go to the folder `apps/desktop/` and run `npm install && npm run dev`.
 3. Keep the app open while you work with the agent.
 
 If you already added the server by hand (`claude mcp add askaboard …` or `codex mcp add askaboard …`), remove that entry first. Otherwise the agent sees every tool twice.
